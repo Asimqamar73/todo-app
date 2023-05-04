@@ -6,7 +6,7 @@ function TodoInput({ addTodo, todoList, editItem }) {
   const [inputText, setInputText] = useState("");
   useEffect(() => {
     if (editItem) {
-      setInputText(editItem);
+      setInputText(editItem.content);
     }
   }, [editItem]);
 

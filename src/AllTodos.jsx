@@ -6,7 +6,7 @@ function AllTodos({ item, deleteTodo, index, handleEditClick }) {
   return (
     <>
       <div className="listing">
-        <ul>{item}</ul>
+        <ul>{item.content}</ul>
         <span className="icons">
           <AiOutlineDelete onClick={() => deleteTodo(index)} />
         </span>
