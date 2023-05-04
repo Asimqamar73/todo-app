@@ -41,13 +41,12 @@ function App() {
 
   return (
     <div className="App">
-      <TodoInput addTodo={addTodo} todoList={todoList} />
+      <TodoInput addTodo={addTodo} todoList={todoList} editItem={editItem} />
       <h2>Todo-Listing</h2>
       <hr />
 
       {todoList.length > 0 ? (
         todoList.map((listItem, i) => {
-          console.log("list item", listItem);
           return (
             <AllTodos
               key={i}

@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { AiTwotoneEdit } from "react-icons/ai";
 function AllTodos({ item, deleteTodo, index, handleEditClick }) {
-  console.log("item", item);
+  // console.log("item", item);
   return (
     <>
       <div className="listing">
@@ -13,7 +13,7 @@ function AllTodos({ item, deleteTodo, index, handleEditClick }) {
       </div>
       <div>
         <span className="edit-icons">
-          <AiTwotoneEdit onClick={() => handleEditClick(index)} />
+          <AiTwotoneEdit onClick={() => handleEditClick(item)} />
         </span>
       </div>
     </>
