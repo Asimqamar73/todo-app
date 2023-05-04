@@ -30,7 +30,7 @@ function TodoInput({ addTodo, todoList, editItem }) {
             }}
             className="btn"
           >
-            {editItem ? "Modify" : "Add"}
+            Add
           </button>
         </div>
         {/* <AllTodos todoList={todoList} /> */}

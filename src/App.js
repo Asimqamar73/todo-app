@@ -13,10 +13,9 @@ function App() {
   });
   const [isEditItem, setIsEditItem] = useState(false);
   const [editItem, setEditItem] = useState(null);
-
-  useEffect(() => {
-    localStorage.setItem("data", JSON.stringify(todoList));
-  }, [todoList]);
+  // useEffect(() => {
+  //   localStorage.setItem("data", JSON.stringify(todoList));
+  // }, [todoList]);
 
   // useEffect(() => {
   //   const data = JSON.parse(localStorage.getItem("data"));
@@ -33,9 +32,10 @@ function App() {
     } else if (inputText !== "" && isEditItem) {
       setTodoList(
         todoList.map((el) => {
-          if (el.id === editItem.id) {
+          if (el._id === editItem._id) {
             return { ...el, content: inputText };
           }
+          return el;
         })
       );
     }
